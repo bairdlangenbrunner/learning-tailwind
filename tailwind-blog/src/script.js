@@ -9,7 +9,6 @@ async function loadHTMLContent() {
 }
 loadHTMLContent();
 
-
 async function addLinkElement(rel, href, crossorigin) {
   return new Promise((resolve, reject) => {
     const link = document.createElement('link');
