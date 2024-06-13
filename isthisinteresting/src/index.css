@@ -2,51 +2,178 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  @apply text-neutral-800;
+}
+
+/* anything in <p> should have serif and lighter neutral color */
+* p,
+p * {
+  @apply text-neutral-700;
+  @apply font-serif;
+  @apply leading-[1.333rem];
+  @apply sm:leading-[1.666rem];
+}
+
 @layer base {
-  ul {
-    list-style-type: disc;
-    list-style-position: inside;
+  .body-div {
+    @apply h-screen;
+    @apply bg-white;
+    @apply flex;
+    @apply flex-col;
+  }
+  .main-div {
+    @apply w-[90vw];
+    @apply sm:w-[600px];
+    @apply mx-auto;
+    @apply flex;
+    @apply flex-col;
+    @apply flex-grow;
+    @apply mt-[28px];
+    @apply sm:mt-[36px];
   }
 
-  a:hover {
+  .header-div {
+    @apply bg-neutral-800;
+    @apply fixed;
+    @apply z-10;
+    @apply w-screen;
+    @apply py-1;
+  }
+  .header-content {
+    @apply text-white;
+    @apply mx-auto;
+    @apply flex;
+    @apply justify-between;
+    @apply items-center;
+    @apply text-lg;
+    @apply sm:text-xl;
+  }
+  #header-nav {
+    @apply space-x-3;
+    @apply text-white;
+  }
+
+  .footer-div {
+    @apply py-[15px];
+    @apply bg-neutral-100;
+    @apply w-screen;
+  }
+
+  .footer-content {
+    @apply mx-auto;
+    @apply w-[100%];
+    @apply text-right;
+    @apply text-sm;
+    @apply sm:text-base;
+  }
+
+  .header-content,
+  .footer-content {
+    @apply max-w-[90%];
+    @apply md:max-w-[700px];
+  }
+
+  article a, .footer-content a  {
     color: magenta;
   }
-  p {
-    @apply font-serif;
-    @apply sm:text-[18px];
-    @apply sm:my-[1.25rem];
-    @apply my-[0.75rem];
-    /* color: #363636; */
-    @apply text-neutral-700;
-    @apply dark:text-white;
-  }
 
-  p:first-child {
-    @apply sm:mt-[2rem];
-    @apply mt-[1.5rem];
-  }
-
-  p:last-child {
-    @apply sm:mb-[2rem];
-    @apply mb-[1.5rem];
-  }
-
-  p a {
-    color: magenta;
-  }
-
-  p a:hover {
+  article a:hover, .footer-content a:hover {
     @apply text-neutral-500;
   }
 
-  h1 {
-    @apply text-4xl;
-    @apply my-[1.25rem];
+  .header-content a, {
+    color: white;
+  }
+  .header-content a:hover {
+    color: magenta;
+  }
+
+  ul li:before {
+    content: "+";
+    padding-right: 0.5em;
+  }
+
+  h1,
+  .h1-post {
     font-weight: 500;
-    @apply sm:text-5xl;
+  }
+
+  h1 {
+    @apply text-3xl;
+    @apply sm:text-4xl;
+  }
+
+  .h1-post {
+    font-weight: 650;
+  }
+
+  .h2-post,
+  .h3-post {
+    font-weight: 700;
+    @apply sm:text-xl;
+    @apply text-base;
+  }
+
+  .h2-post {
+    @apply sm:text-[1.125rem];
+    @apply font-serif;
+    @apply leading-[1.25rem];
+    @apply sm:leading-[1.5rem];
+  }
+
+  .h3-post {
+    @apply mt-[2rem];
+    @apply mb-[1.5rem];
+    @apply text-[24px];
+  }
+
+  article p {
+    @apply sm:text-[1.125rem];
+    @apply my-[1rem];
+    @apply sm:my-[1.25rem];
+  }
+
+  .article-text-div {
+    /* @apply mt-[1.5rem]; */
+    /* @apply mb-[2rem]; */
+  }
+
+  .article-heading-div {
+    /* @apply border; */
+    @apply flex;
+    @apply flex-col;
+    gap: 15px;
+    @apply my-[1.75rem];
+    /* @apply sm:my-[1.75rem]; */
+    @apply bg-pink-50;
+    @apply p-[15px];
+    @apply rounded-lg;
+  }
+
+  .date,
+  .author {
+    @apply text-right;
+    @apply font-sans;
+    /* @apply bg-neutral-100; */
+    @apply text-sm;
+    /* @apply sm:text-sm; */
+  }
+
+  .date-author-div {
+    @apply flex;
+    justify-content: space-between;
   }
 
   .language-general {
+  }
+
+  figcaption {
+    @apply text-neutral-500;
+    @apply text-xs;
+    /* @apply text-center; */
+    /* @apply font-serif; */
+    @apply mt-[0.75rem];
   }
 
   pre,
@@ -68,26 +195,8 @@
   pre {
     @apply py-[0.75rem];
     @apply px-[1rem];
-    /* padding-left: 2rem; */
     overflow: auto;
     text-wrap: nowrap;
     position: relative;
-    /* counter-reset: line; */
-    /* counter-increment: line; */
   }
-
-  /* pre code {
-    /* display: block; */
-  /* counter-increment: line; */
-  /* position: relative; */
-  /* } */
-
-  /* pre code::before { */
-  /* counter-increment: line; */
-  /* content: counter(line); */
-  /* display: inline-block; */
-  /* margin-left: -1.25rem; */
-  /* margin-right: 0.5rem; */
-  /* text-align: right; */
-  /* } */
 }

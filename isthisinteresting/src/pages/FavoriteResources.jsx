@@ -5,9 +5,9 @@ import Footer from "../components/Footer/Footer";
 function FavoriteResources() {
   return (
     <>
-      <section className="h-screen bg-white dark:bg-neutral-950 dark:text-white flex flex-col">
+      <section className="body-section">
         <Header />
-        <section className="mt-[4rem] w-[90vw] sm:w-[600px] mx-auto flex-grow">
+        <section className="main-section">
           <h1>favorite resources</h1>
           <section>
             <p>Wash Po</p>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import '../../index.css'
 
 function Header() {
@@ -6,19 +7,21 @@ function Header() {
     <>
       <header
         id="header"
-        className="bg-neutral-950 text-white fixed z-10 w-screen top-0 py-1"
+        className="header-div"
       >
-        <section className="max-w-[90vw] md:max-w-[700px] mx-auto flex justify-between items-center">
-          <text className="text-lg">
-            <a href="../src/index.html">is this interesting?</a>
-          </text>
+        <section className="header-content">
+
+            <Link to="/">is this interesting</Link>
+
           {/* <!-- <button id="mobile-open-button" class="text-lg sm:hidden"> */}
           {/* ☰ */}
           {/* </button> --> */}
           {/* <!-- <nav class="hidden sm:block sm:space-x-2 text-lg" aria-label="main"> --> */}
-          <nav className="space-x-3 text-lg" aria-label="main">
-            <a href="../src/index.html">about</a>
-            <a href="../src/index.html">archive</a>
+          <nav id="header-nav" aria-label="main">
+            <Link to="/about" className="hidden">about</Link>
+            <Link to="/archive" className="hidden">archive</Link>
+            {/* <a href="../src/index.html">about</a> */}
+            {/* <a href="../src/index.html">archive</a> */}
           </nav>
         </section>
       </header>
