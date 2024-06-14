@@ -35,8 +35,14 @@ function ListGroup({ heading, items, onSelectItem }: ListGroupProps) {
             }
             key={item}
             onClick={() => {
-              setSelectedIndex(index); // passing a reference NOT calling function
-              onSelectItem(item);
+              if (selectedIndex!==index) {
+                setSelectedIndex(index); // passing a reference NOT calling function
+                onSelectItem(item);
+              }
+              else {
+                setSelectedIndex(-1);
+                onSelectItem(item); // prints out what it is
+              }
             }}
           >
             {item}
