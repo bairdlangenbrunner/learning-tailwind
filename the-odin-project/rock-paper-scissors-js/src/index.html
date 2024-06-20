@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rock paper scissors</title>
+    <link rel="stylesheet" href="./output.css" />
+  </head>
+  <body class="bg-pink-200 p-[5rem] w-11/12 sm:w-full mx-auto">
+    <h1 class="font-sans text-xl sm:text-5xl font-bold sm:text-center">
+      rock paper scissors
+    </h1>
+
+    <form id="human-input" class="mt-10 bg-pink-50 mx-auto">
+      <div>
+        <input type="radio" id="rock" name="option" for="rock" />
+        <label for="rock">rock</label>
+      </div>
+      <div>
+        <input type="radio" id="paper" name="option" for="paper" />
+        <label for="paper">paper</label>
+      </div>
+      <div>
+        <input type="radio" id="scissors" name="option" for="scissors" />
+        <label for="scissors">scissors</label>
+
+        <div>
+          <button
+            type="submit"
+            id="submit-button"
+            class="bg-pink-50 p-1 rounded-lg outline"
+          >
+            submit
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <div id="scores-div">
+      <span class="text-xl font-bold">scoreboard</span>
+      <div id="human-score-div" class="font-bold">human:</div>
+      <div id="computer-score-div" class="font-bold">computer:</div>
+    </div>
+
+    <div id="results-div">
+      <div id="games-played-div" class="text-xl font-bold">gameplay</div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
