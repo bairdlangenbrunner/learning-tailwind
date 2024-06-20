@@ -1,0 +1,5 @@
+ffmpeg -i screen-recording.mov -filter_complex "fps=25" out.gif
+
+^
+command to convert mov to gif, and reduce frame rate (fps)
+had to brew install ffmpeg first
