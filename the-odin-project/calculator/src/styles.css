@@ -1,0 +1,97 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+}
+
+html,
+body {
+  /* width: 100%; */
+  height: 100%;
+}
+
+main {
+  display: flex;
+  margin: auto;
+  background-color: pink;
+  height: 100%;
+}
+
+#calculator-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: auto;
+  /* padding: 40px; */
+}
+
+#buttons-div {
+  /* width: 100%; */
+  /* height: 100%; */
+  display: flex;
+  gap: 10px;
+}
+
+#number-pad-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#operators-div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#display-div {
+  height: 40px;
+  width: 180px;
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  text-align: right;
+  padding: 5px;
+  overflow: hidden;
+}
+
+button {
+  background-color: lightgray;
+  text: black;
+  border: 0.5px black solid;
+}
+
+button:hover {
+  background-color: black;
+  color: lightgray;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: lightgray;
+  color: black;
+}
+
+.number {
+  width: 40px;
+  height: 40px;
+}
+
+.operator {
+  width: 40px;
+  height: 40px;
+}
+
+#button-clear {
+  height: 40px;
+  width: 90px;
+}
+
+#button-0 {
+  width: 90px;
+}
+
+.number-row-div {
+  display: flex;
+  gap: 10px;
+}
