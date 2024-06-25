@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <table>
+      <tr>
+        <th>header1</th>
+        <th>header2</th>
+      </tr>
+      <tr>
+        <td>data1</td>
+        <td>data2</td>
+      </tr>
+    </table>
+    <br />
+    <table>
+      <tr>
+        <td>one</td>
+        <td>two</td>
+        <td>three</td>
+        <td>four</td>
+      </tr>
+    </table>
+
+    <br />
+
+    <table>
+      <tr>
+        <th>&nbsp;</th>
+        <th>Knocky</th>
+        <th>Flor</th>
+        <th>Ella</th>
+        <th>Juan</th>
+      </tr>
+      <tr>
+        <td>Breed</td>
+        <td>Jack Russell</td>
+        <td>Poodle</td>
+        <td>Streetdog</td>
+        <td>Cocker Spaniel</td>
+      </tr>
+      <tr>
+        <td>Age</td>
+        <td>16</td>
+        <td>9</td>
+        <td>10</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td>Owner</td>
+        <td>Mother-in-law</td>
+        <td>Me</td>
+        <td>Me</td>
+        <td>Sister-in-law</td>
+      </tr>
+      <tr>
+        <td>Eating Habits</td>
+        <td>Eats everyone's leftovers</td>
+        <td>Nibbles at food</td>
+        <td>Hearty eater</td>
+        <td>Will eat till he explodes</td>
+      </tr>
+    </table>
+    <br />
+
+    <table>
+      <tr>
+        <th colspan="2">Animals</th>
+      </tr>
+      <tr>
+        <th colspan="2">Hippopotamus</th>
+      </tr>
+      <tr>
+        <th>Horse</th>
+        <td>Mare</td>
+      </tr>
+      <tr>
+        <td>Stallion</td>
+      </tr>
+      <tr>
+        <th colspan="2">Crocodile</th>
+      </tr>
+      <tr>
+        <th>Chicken</th>
+        <td>Hen</td>
+      </tr>
+      <tr>
+        <td>Rooster</td>
+      </tr>
+    </table>
+
+    <br />
+    <table>
+      <caption>
+        table caption
+      </caption>
+      <colgroup>
+        <col />
+        <col style="background-color: pink" span="1" />
+      </colgroup>
+      <tr>
+        <th>Data 1</th>
+        <th>Data 2</th>
+      </tr>
+      <tr>
+        <td>Calcutta</td>
+        <td>Orange</td>
+      </tr>
+      <tr>
+        <td>Robots</td>
+        <td>Jazz</td>
+      </tr>
+    </table>
+
+    <br />
+
+    <table>
+      <thead>
+        <!-- wraps the col headers -->
+        <tr>
+          <td></td>
+          <th>header 1</th>
+          <th>header 2</th>
+          <th>header 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>data</th>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+        </tr>
+        <tr>
+          <th>data</th>
+          <td>data</td>
+          <td>data</td>
+          <td>data</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>sum</th>
+          <td colspan="3"></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- action (url) and method (GET, POST) for forms -->
+    <!-- form controls: text boxes, dropdowns, checkboxes, buttons -->
+    <!-- input element -->
+    <!-- id and for need to match -->
+    <!-- name= attribute tells backend how to store in json -->
+    <!-- YOU ALWAYS NEED A NAME= ATTR, OTHERWISE FORM WILL BE IGNORED WHEN SUBMITTED -->
+
+    <br />
+    <h1>input stuff</h1>
+    <br />
+
+    <form action="example.com/path" method="post">
+      <label for="first_name">First Name:</label>
+      <input
+        type="text"
+        id="first_name"
+        placeholder="name..."
+        name="first_name"
+      />
+    </form>
+
+    <form action="">
+      <label for="user_email">email address:</label>
+      <input
+        type="email"
+        id="user_email"
+        name="email"
+        placeholder="email@email.com"
+      />
+    </form>
+
+    <form action="">
+      <label for="user_password">password</label>
+      <input type="password" id="user_password" name="password" />
+    </form>
+
+    <textarea name="" id="" rows="20" cols="40">
+tell us about your experience...</textarea
+    >
+
+    <br />
+
+    <select name="car" id="car">
+      <option value="mercedes">Mercedes</option>
+      <option value="toyota">Toyota</option>
+      <option value="honda" selected>[select one]</option>
+    </select>
+
+    <select name="fashion" id="">
+      <optgroup label="clothing">
+        <option value="pants">PANts</option>
+        <option value="shirt">shiRT</option>
+      </optgroup>
+      <optgroup label="shoes">
+        <option value="">sandals</option>
+        <option value="">BOOTS</option>
+      </optgroup>
+    </select>
+
+    <h1>Ticket Type</h1>
+    <div>
+      <input type="radio" id="child" name="ticket_type" value="child" />
+      <label for="child">Child</label>
+    </div>
+
+    <div>
+      <input type="radio" id="adult" name="ticket_type" value="adult" checked />
+      <label for="adult">Adult</label>
+    </div>
+
+    <div>
+      <label for="senior">Senior</label>
+      <input type="radio" id="senior" name="ticket_type" value="senior" />
+    </div>
+
+    <h1>Pizza Toppings</h1>
+
+    <div>
+      <input type="checkbox" id="sausage" name="topping" value="sausage" />
+      <label for="sausage">Sausage</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="onions" name="topping" value="onions" />
+      <label for="onions">Onions</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="pepperoni" name="topping" value="pepperoni" />
+      <label for="pepperoni">Pepperoni</label>
+    </div>
+
+    <div>
+      <input type="checkbox" id="mushrooms" name="topping" value="mushrooms" />
+      <label for="mushrooms">Mushrooms</label>
+    </div>
+    <script src="script.js"></script>
+
+    <br />
+    <br />
+    <div>
+      <input type="checkbox" id="newsletter" name="news_letter" checked />
+      <label for="newsletter">Send me the newsletter</label>
+    </div>
+
+    <br />
+
+    <!-- submit, reset, generic "button" -->
+    <!-- submit is default value and page will always SUBMIT when you click it; choose type="button" to have generic value and avoid triggering a page reload -->
+    <button>click me</button>
+    <button type="submit">submit</button>
+    <button type="reset">reset</button>
+    <button type="button">generic</button>
+
+    <br />
+    <fieldset>
+      <legend>Contact Details</legend>
+
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+
+      <label for="phone_number">Phone Number:</label>
+      <input type="tel" id="phone_number" name="phone_number" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Delivery Details</legend>
+
+      <label for="street_address">Street Address:</label>
+      <input type="text" id="street_address" name="street_address" />
+
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" />
+
+      <label for="zip_code">Zip Code:</label>
+      <input type="text" id="zip_code" name="zip_code" />
+    </fieldset>
+
+    <fieldset>
+      <legend>What would you like to drink?</legend>
+
+      <div>
+        <input type="radio" name="drink" id="coffee" value="coffee" />
+        <label for="coffee">Coffee</label>
+      </div>
+
+      <div>
+        <input type="radio" name="drink" id="tea" value="tea" />
+        <label for="tea">Tea</label>
+      </div>
+
+      <div>
+        <input type="radio" name="drink" id="soda" value="soda" />
+        <label for="soda">Soda</label>
+      </div>
+    </fieldset>
+  </body>
+
+  <br />
+  <br />
+  <br />
+
+  <form action="/my-handling-form-page" method="post" class="form-mdn">
+    <ul>
+      <li>
+        <label for="user_name">name</label>
+        <input type="text" id="name" name="user_name" />
+      </li>
+      <li>
+        <label for="user_email">email</label>
+        <input
+          type="email"
+          id="email"
+          name="user_email"
+          placeholder="email here"
+          value="email"
+        />
+      </li>
+      <li>
+        <label for="user_msg">message</label>
+        <textarea name="user_text" id="text">
+Tell us about your experience</textarea
+        >
+      </li>
+      <li class="button"><button type="submit">Send message</button></li>
+    </ul>
+  </form>
+
+  <br /><br /><br /><br /><br />
+
+  <form action="">
+    <h1>Payment form</h1>
+    <p>
+      Required fields are followed by
+      <strong><span aria-label="required">*</span></strong
+      >.
+    </p>
+    <section>
+      <h2>Contact information</h2>
+      <fieldset>
+        <legend>Title</legend>
+        <ul>
+          <li>
+            <label for="title_1">
+              <input type="radio" id="title_1" name="title" value="A" />
+              Ace
+            </label>
+          </li>
+          <li>
+            <label for="title_2">
+              <input type="radio" id="title_2" name="title" value="K" />
+              King
+            </label>
+          </li>
+          <li>
+            <label for="title_3">
+              <input type="radio" id="title_3" name="title" value="Q" />
+              Queen
+            </label>
+          </li>
+        </ul>
+      </fieldset>
+      <p>
+        <label for="name">
+          <span>Name: </span>
+          <strong><span aria-label="required">*</span></strong>
+        </label>
+        <input type="text" id="name" name="username" required />
+      </p>
+      <p>
+        <label for="mail">
+          <span>Email: </span>
+          <strong><span aria-label="required">*</span></strong>
+        </label>
+        <input type="email" id="mail" name="usermail" required />
+      </p>
+      <p>
+        <label for="pwd">
+          <span>Password: </span>
+          <strong><span aria-label="required">*</span></strong>
+        </label>
+        <input type="password" id="pwd" name="password" required />
+      </p>
+    </section>
+
+    <section>
+      <h2>Payment information</h2>
+      <p>
+        <label for="card">
+          <span>Card type:</span>
+        </label>
+        <select id="card" name="usercard">
+          <option value="visa">Visa</option>
+          <option value="mc">Mastercard</option>
+          <option value="amex">American Express</option>
+        </select>
+      </p>
+      <p>
+        <label for="number">
+          <span>Card number:</span>
+          <strong><span aria-label="required">*</span></strong>
+        </label>
+        <input type="tel" id="number" name="cardnumber" required />
+      </p>
+      <p>
+        <label for="expiration">
+          <span>Expiration date:</span>
+          <strong><span aria-label="required">*</span></strong>
+        </label>
+        <input
+          type="text"
+          id="expiration"
+          name="expiration"
+          required
+          placeholder="MM/YY"
+          pattern="^(0[1-9]|1[0-2])\/([0-9]{2})$"
+        />
+      </p>
+    </section>
+    <section>
+      <p>
+        <button type="submit">Validate the payment</button>
+      </p>
+    </section>
+  </form>
+  
+</html>

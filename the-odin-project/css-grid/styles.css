@@ -1,0 +1,107 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* .flex-container {
+  display: flex;
+}
+
+.flex-container div {
+  background:peachpuff;
+  height: 100px;
+  border: 4px solid brown;
+  flex: 1;
+} */
+
+/* .grid-container {
+  display: grid;
+  grid-template-columns: 75px 75px 75px;
+  grid-template-rows: 75px 75px;
+  gap: 32px;
+}
+
+.grid-container div {
+  background:peachpuff;
+  border: 4px solid brown;
+  flex: 1;
+} */
+
+/* .container {
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+  grid-auto-rows: 100px;
+  /* grid-template: 50px 50px / 50px 50px 50px; */
+/* column-gap: 10px; */
+/* row-gap: 40px; */
+/* } */
+
+/* .container > div { */
+/* border: 1px solid blue; */
+/* } */
+
+/* .container {
+  display: grid;
+  grid-template: 100px 100px 100px / 100px 100px 100px;
+}
+
+.container > div {
+  background-color: orange;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.container > div:nth-child(-n+3) {
+  background-color: pink;
+}
+
+.container > div:nth-last-child(-n+3) {
+  background-color: green;
+} */
+
+.container {
+  display: grid;
+  grid-template: 100px 100px 100px 100px 100px / 100px 100px 100px 100px 100px;
+  background-color: lightblue;
+}
+
+.room {
+  border: 1px solid;
+  /* font-size: 75%; */
+  text-align: center;
+}
+
+/* #living-room {
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}*/
+
+#bathroom {
+  grid-column: 1 / 2;
+  grid-row: 3/6;
+}
+
+#kitchen {
+  grid-column: 4/6;
+  grid-row: 3/6;
+}
+
+#bedroom {
+  grid-column: 2/4;
+  grid-row: 3/5;
+}
+
+#closet {
+  grid-column: 2/4;
+  grid-row: 5/6;
+}
+
+#living-room {
+  grid-area: 1/1/3/6;
+}

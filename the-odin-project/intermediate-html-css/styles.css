@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 300vh;
+  margin: auto;
+  width: 600px;
+}
+
+table,
+td,
+th {
+  border: solid black 0.5px;
+}
+
+tbody {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+thead {
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+input::placeholder {
+  color: pink;
+}
+
+.form-mdn {
+  display: inline-block;
+  /* outline: none */
+  /* form outline */
+  padding: 1em;
+  border: 1px #ccc solid;
+  border-radius: 1em;
+}
+
+.form-mdn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-mdn li + li {
+  margin-top: 1em;
+}
+
+.form-mdn label {
+  /* uniform size and alignment */
+  display: inline-block;
+  min-width: 90px;
+  text-align: right;
+}
+
+.form-mdn input,
+.form-mdn textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+  width: 40ch;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+.form-mdn textarea:focus,
+.form-mdn input:focus {
+  /* border-color: pink; */
+  outline: none;
+  border: 3px solid #000;
+  background-color: lightpink;
+}
+
+.form-mdn textarea {
+  vertical-align: top;
+  height: 5em;
+}
+
+.form-mdn .button {
+  padding-left: 90px;
+}
+
+.form-mdn button {
+  margin-left: 0.275em
+}
+
+/* fieldset.contact {
+  background: lightpink;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+}
+
+fieldset.contact input {
+  width: 75%;
+  display: flex;
+  justify-content: right;
+}
+
+fieldset.contact textarea {
+  width:75%;
+} */
