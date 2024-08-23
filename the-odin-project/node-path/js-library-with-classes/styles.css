@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+form > * {
+  margin: 0.5rem
+}
+
+button {
+  padding: 15px;
+  border-radius: 3rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+
+button:active {
+  color: magenta;
+  background-color: black;
+}
+
+input, label {
+  font-size: 1.5rem;
+}
+
+h1 {
+  color: magenta;
+}

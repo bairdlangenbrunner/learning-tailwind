@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <fieldset>
+        <form action="">
+          <div>
+            <label for="title">title</label>
+            <input type="text" id="title" placeholder="book title" />
+          </div>
+          <div>
+            <label for="author">author</label>
+            <input type="text" id="author" placeholder="book author" />
+          </div>
+          <div class="radio-div">
+            <div>
+              <input type="radio" id="read" name="read" value="true" />
+              <label for="read">read</label>
+            </div>
+            <div>
+              <input type="radio" id="unread" name="read" value="false" checked />
+              <label for="read">unread</label>
+            </div>
+          </div>
+          <button>add book</button>
+        </form>
+      </fieldset>
+
+      <h1>library</h1>
+      <div class="library"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
