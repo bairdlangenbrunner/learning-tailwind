@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    
+
+
+
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script type="text/javascript">
+      // select div element with id="app"
+      const app = document.getElementById("app");
+      // create a new H1 element
+      const header = document.createElement("h1");
+      // create a new text node for the H1 element
+      const text = "Develop. Preview. Ship.";
+      const headerContent = document.createTextNode(text);
+      // append text to the H1 element
+      header.appendChild(headerContent);
+      // place H1 element inside div
+      app.appendChild(header);
+    </script>
+  </body>
+</html>
